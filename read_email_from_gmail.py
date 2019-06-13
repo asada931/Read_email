@@ -10,7 +10,7 @@ from time import sleep
 
 
 
-ORG_EMAIL   = "@xyz.com"
+ORG_EMAIL   = "@gmail.com"
 FROM_EMAIL  = "email" + ORG_EMAIL
 FROM_PWD    = "Your password"
 SMTP_SERVER = "imap.gmail.com"
@@ -38,7 +38,7 @@ def read_email_from_gmail():
         while(True):
             mail.select('inbox',readonly=True)
             #to search inbox for specific email addresses 
-            type, data = mail.search(None, '(FROM "Specific_email_id")')
+            type, data = mail.search(None, '(FROM "Specific_Sender_Name")')
             mail_ids = data[0]
             id_list = mail_ids.split()
             # latest_email_id = id_list[-1]
